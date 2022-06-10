@@ -14,7 +14,13 @@ public class Runnable {
 			System.out.println("La macchina piu' costosa e': \n");
 			System.out.println(infoMacchinaPiuCostosa(auto).stampaInformazioni());
 			System.out.println("-----------------------------");
-			System.out.println("La macchina con la targa richiesta e': \n" + infoMacchina(auto, "MM NN OO").stampaInformazioni());
+			Macchina macchinaByTarga = infoMacchina(auto, "MM NN OO"); 
+			
+			if(macchinaByTarga != null)
+				System.out.println("La macchina con la targa richiesta e': \n" + macchinaByTarga.stampaInformazioni());
+			else 
+				System.out.println("La macchina con la targa richiesta non e' stata trovata");
+			
 			System.out.println("-----------------------------");
 			System.out.println("La macchina con il colore richiesto e': \n");
 			infoMacchinaColore(auto, "blu");
